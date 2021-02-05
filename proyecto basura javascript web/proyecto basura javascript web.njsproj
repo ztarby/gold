@@ -28,7 +28,19 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="app.tsx">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="func.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="index.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="tsconfig.json">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="webpack-config.js">
       <SubType>Code</SubType>
     </Content>
     <Content Include="server.js" />

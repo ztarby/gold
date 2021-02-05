@@ -1,20 +1,28 @@
 'use strict';
-var http = require('http');
+
 /* basura mia */
 
 const func = require('./func.js');
 
-
-
-
-var aa = 5;
-var bb = 3;
-
-console.log(func);
-
 /* fin basura mnia */
-var port = process.env.PORT || 1337;
+var path = require('path');
+var express = require('express');
 
+var app = express();
+
+var staticpath = path.join(__dirname, '/');
+app.use(express.static(staticpath));
+
+app.set('port', process.env.PORT || 3000);
+
+var server = app.listen(app.get('port'), function () {
+    console.log('listening');
+});
+
+/* code original **************
+ 
+var http = require('http');
+var port = process.env.PORT || 1337;
 http.createServer(function (req, res) {
     res.writeHead(200, { 'Content-Type': 'text/plain' });
     res.end('Deja de distareter\n');
@@ -23,4 +31,4 @@ http.createServer(function (req, res) {
     
 }).listen(port);
 
-
+ code original *********************   */
