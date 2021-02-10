@@ -1,7 +1,7 @@
 declare var require: any
 
 var React = require('react');
-var Reactdom = require('reactdom');
+var Reactdom = require('react-dom');
 
 export class testr extends React.Compoment {
     render() {
